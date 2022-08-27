@@ -1,16 +1,11 @@
-using System;
-using System.Collections.Generic;
-
-class Program
+while (true)
 {
-    static void Main(string[] args)
+    Console.WriteLine("Enter the base currency:");
+    string baseCurrency = Console.ReadLine().ToUpper();
+
+    if (!exchangeRates.ContainsKey(baseCurrency))
     {
-        Dictionary<string, decimal> exchangeRates = new Dictionary<string, decimal>()
-        {
-            { "USD", 1.00m },
-            { "EUR", 0.85m },
-            { "JPY", 110.08m },
-            { "GBP", 0.72m }
-        };
+        Console.WriteLine("Invalid base currency. Try again.");
+        continue;
     }
 }
